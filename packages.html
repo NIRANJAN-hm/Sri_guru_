@@ -1,0 +1,1458 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Construction Packages - SRI GURU CONSTRUCTION & INTERIORS | Building Packages in Bellary</title>
+  <meta content="Explore our comprehensive construction packages designed for different budgets and requirements. From Gold to Luxury plans, find the perfect construction package for your dream home in Bellary, Karnataka." name="description">
+  <meta content="construction packages, building packages, home construction plans, Bellary construction, construction pricing, residential packages, commercial packages" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body.packages-page {
+      background: #fdf8f4;
+      color: #364d59;
+    }
+
+    .packages-hero {
+      position: relative;
+      padding: 140px 0 110px;
+      background: linear-gradient(135deg, rgba(26, 37, 47, 0.88) 0%, rgba(255, 107, 53, 0.78) 55%, rgba(247, 147, 30, 0.75) 100%),
+        url("assets/img/hero-carousel/hero-carousel-2.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .packages-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.25), transparent 55%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.18), transparent 50%);
+      pointer-events: none;
+    }
+
+    .packages-hero .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .packages-hero h1 {
+      font-size: clamp(2.5rem, 4vw, 3.75rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .packages-hero p.lead {
+      font-size: 1.15rem;
+      max-width: 620px;
+      color: #f5f7fb;
+      opacity: 0.95;
+      text-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .hero-action-buttons .btn {
+      border-radius: 40px;
+      padding: 14px 28px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-action-buttons .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-stats {
+      margin-top: 10px;
+    }
+
+    .hero-metric {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(18px);
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-metric i {
+      font-size: 1.75rem;
+      color: #ffd7bd;
+    }
+
+    .hero-metric strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-metric small {
+      display: block;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .hero-offer-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 26px;
+      padding: 32px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-offer-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.3), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-offer-card h3 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-offer-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+      display: grid;
+      gap: 12px;
+      color: #f5f7fb;
+    }
+
+    .hero-offer-card li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .hero-offer-card li i {
+      color: #ffd7bd;
+      font-size: 1.1rem;
+    }
+
+    .hero-offer-card .stamp {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(26, 37, 47, 0.25);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .section-intro {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-intro .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ff6b35;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-intro h2 {
+      font-weight: 800;
+      color: #1a252f;
+      margin-bottom: 15px;
+    }
+
+    .section-intro p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: #556270;
+    }
+
+    .plans-section {
+      padding: 100px 0 90px;
+    }
+
+    .packages-journey {
+      position: relative;
+      margin-top: 60px;
+      padding: 10px 0 40px;
+    }
+
+    .packages-journey::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, rgba(255, 107, 53, 0.22) 0%, rgba(247, 147, 30, 0.18) 100%);
+      border-radius: 999px;
+    }
+
+    .journey-tier {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 120px minmax(0, 1fr);
+      gap: 35px;
+      align-items: center;
+      margin-bottom: 110px;
+    }
+
+    .journey-tier:last-child {
+      margin-bottom: 0;
+    }
+
+    .journey-tier--left .journey-panel {
+      grid-column: 1;
+    }
+
+    .journey-tier--right .journey-panel {
+      grid-column: 3;
+    }
+
+    .journey-node {
+      grid-column: 2;
+      position: relative;
+      z-index: 2;
+      background: #ffffff;
+      padding: 26px 24px;
+      border-radius: 200px;
+      text-align: center;
+      box-shadow: 0 25px 55px rgba(26, 37, 47, 0.15);
+      border: 1px solid rgba(255, 107, 53, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      justify-self: center;
+    }
+
+    .journey-node::before {
+      content: "";
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      box-shadow: 0 0 0 8px rgba(255, 107, 53, 0.18);
+    }
+
+    .node-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(54, 77, 89, 0.6);
+      font-weight: 700;
+    }
+
+    .journey-node h3 {
+      font-weight: 800;
+      font-size: 1.6rem;
+      margin: 0;
+      color: #1a252f;
+    }
+
+    .node-price {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #ff6b35;
+    }
+
+    .node-price span {
+      display: block;
+      font-size: 0.9rem;
+      color: rgba(54, 77, 89, 0.6);
+      letter-spacing: 1px;
+    }
+
+    .journey-node p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #556270;
+      max-width: 220px;
+    }
+
+    .journey-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .journey-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(255, 107, 53, 0.35);
+      color: #ffffff;
+    }
+
+    .journey-panel {
+      position: relative;
+      padding: 45px 60px;
+      color: #1a252f;
+    }
+
+    .journey-tier--left .journey-panel {
+      clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 214, 185, 0.82) 100%);
+    }
+
+    .journey-tier--right .journey-panel {
+      clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+      background: linear-gradient(225deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 226, 196, 0.88) 100%);
+    }
+
+    .journey-tier--signature .journey-panel {
+      background: linear-gradient(135deg, rgba(255, 119, 63, 0.12) 0%, rgba(255, 214, 185, 0.98) 100%);
+    }
+
+    .journey-tier--luxury .journey-panel {
+      background: linear-gradient(135deg, rgba(26, 37, 47, 0.92) 0%, rgba(255, 107, 53, 0.82) 100%);
+      color: #ffffff;
+    }
+
+    .journey-panel .journey-intro {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .journey-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .journey-pillar {
+      padding-left: 16px;
+      border-left: 4px solid rgba(255, 107, 53, 0.6);
+    }
+
+    .journey-tier--luxury .journey-pillar {
+      border-left-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .journey-pillar h4 {
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: inherit;
+    }
+
+    .journey-pillar h4 i {
+      font-size: 1rem;
+      color: #ff6b35;
+    }
+
+    .journey-tier--luxury .journey-pillar h4 i {
+      color: #ffd7bd;
+    }
+
+    .journey-pillar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+      font-size: 0.92rem;
+    }
+
+    .journey-pillar li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .journey-pillar li::before {
+      content: "\f26e";
+      font-family: "bootstrap-icons";
+      font-size: 0.85rem;
+      color: #ff6b35;
+      margin-top: 3px;
+    }
+
+    .journey-tier--luxury .journey-pillar li::before {
+      color: #ffd7bd;
+    }
+
+    .journey-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(26, 37, 47, 0.08);
+      color: #1a252f;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .meta-chip i {
+      font-size: 0.9rem;
+      color: #ff6b35;
+    }
+
+    .journey-tier--luxury .meta-chip {
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+    }
+
+    .journey-tier--luxury .meta-chip i {
+      color: #ffd7bd;
+    }
+
+    @media (max-width: 1199px) {
+      .journey-pillars {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 991px) {
+      .packages-journey::before {
+        left: 55px;
+      }
+
+      .journey-tier {
+        grid-template-columns: 1fr;
+        margin-bottom: 80px;
+      }
+
+      .journey-panel {
+        clip-path: none;
+        border-radius: 24px;
+        padding: 35px 32px;
+      }
+
+      .journey-node {
+        grid-column: 1;
+        justify-self: flex-start;
+      }
+
+      .journey-node::before {
+        left: 60px;
+        transform: none;
+      }
+
+      .journey-pillars {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .packages-journey::before {
+        display: none;
+      }
+
+      .journey-tier {
+        margin-bottom: 60px;
+      }
+
+      .journey-node {
+        border-radius: 24px;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px 22px;
+        gap: 6px;
+      }
+
+      .journey-node::before {
+        left: 30px;
+      }
+
+      .node-price {
+        font-size: 1.6rem;
+      }
+
+      .journey-cta {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .comparison-section {
+      background: #1a252f;
+      color: #ffffff;
+      padding: 110px 0 100px;
+    }
+
+    .comparison-section .section-intro p {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .comparison-table {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .comparison-table th {
+      border: none;
+      padding: 18px 24px;
+      background: rgba(255, 255, 255, 0.08);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .comparison-table td {
+      border: none;
+      padding: 18px 24px;
+      font-size: 0.95rem;
+      vertical-align: middle;
+    }
+
+    .comparison-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .comparison-table .bi-check-circle-fill {
+      color: #6ee7b7;
+      font-size: 1.1rem;
+    }
+
+    .comparison-table .bi-dash-lg {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 1rem;
+    }
+
+    .addons-section {
+      padding: 100px 0 90px;
+      background: #fff5ec;
+    }
+
+    .addon-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 40px rgba(26, 37, 47, 0.08);
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 107, 53, 0.12);
+    }
+
+    .addon-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 55px rgba(26, 37, 47, 0.12);
+    }
+
+    .addon-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .addon-card h4 {
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .addon-card p {
+      color: #556270;
+      margin-bottom: 0;
+    }
+
+    .process-section {
+      padding: 100px 0;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 18px;
+      padding: 26px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 15px 35px rgba(26, 37, 47, 0.08);
+      align-items: flex-start;
+      height: 100%;
+    }
+
+    .process-step .step-number {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ff6b35, #f7931e);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .process-step h4 {
+      margin-bottom: 8px;
+      font-weight: 700;
+      color: #1a252f;
+    }
+
+    .process-step p {
+      color: #556270;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .faq-section {
+      padding: 100px 0 90px;
+      background: #fdf8f4;
+    }
+
+    details.faq-item {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px 26px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 25px rgba(26, 37, 47, 0.06);
+      border: 1px solid rgba(255, 107, 53, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    details.faq-item[open] {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 35px rgba(26, 37, 47, 0.08);
+      border-color: rgba(255, 107, 53, 0.25);
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      font-weight: 700;
+      color: #1a252f;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 1rem;
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item p {
+      margin: 16px 0 0;
+      color: #556270;
+      font-size: 0.95rem;
+    }
+
+    .packages-cta {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #1a252f 0%, #ff6b35 55%, #f7931e 100%);
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .packages-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.12), transparent 45%);
+    }
+
+    .packages-cta .cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .packages-cta h2 {
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .packages-cta p {
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    .packages-cta .btn {
+      border-radius: 40px;
+      padding: 14px 34px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 991px) {
+      .hero-offer-card {
+        margin-top: 30px;
+      }
+
+      .process-step {
+        height: auto;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .packages-hero {
+        padding: 110px 0 80px;
+      }
+
+      .hero-action-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .hero-metric {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .comparison-table table {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 575px) {
+      details.faq-item {
+        padding: 18px 20px;
+      }
+
+      .packages-cta {
+        padding: 90px 0;
+      }
+
+      .packages-cta .btn {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <style>
+    /* Let hero background sit behind the fixed header */
+    .packages-hero {
+      margin-top: -90px;
+      padding-top: 180px;
+    }
+
+    @media (max-width: 991px) {
+      .packages-hero {
+        margin-top: -70px;
+        padding-top: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body class="packages-page">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="images/new_logo.jpg" alt="Sri Guru Construction & Interiors" style="height: 60px; width: auto; margin-right: 15px;">
+        <h1 style="color: #FF6B35; font-weight: 700;">Sri Guru <span style="color: #F7931E;">Construction</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown"><a href="services.html"><span>Services</span> <i
+                class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a class="dropdown-item" href="interior.html"><i class="bi bi-house-door"></i> Interior Design</a></li>
+              <li><a class="dropdown-item" href="exterior.html"><i class="bi bi-building"></i> Exterior Design</a></li>
+              <li><a class="dropdown-item" href="pre-design.html"><i class="bi bi-pencil-square"></i> Pre Design</a></li>
+              <li><a class="dropdown-item" href="residential.html"><i class="bi bi-house-heart"></i> Residential</a></li>
+              <li><a class="dropdown-item" href="commercial.html"><i class="bi bi-buildings"></i> Commercial</a></li>
+              <li><a class="dropdown-item" href="renovation.html"><i class="bi bi-tools"></i> Renovation</a></li>
+              <li><a class="dropdown-item" href="consultation.html"><i class="bi bi-chat-dots"></i> Consultation</a></li>
+            </ul>
+          </li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="packages.html" class="active">Packages</a></li>
+          <li><a href="materials.html">Materials</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <section class="packages-hero">
+      <div class="container position-relative">
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-7">
+            <span class="hero-eyebrow" data-aos="fade-up"><i class="bi bi-boxes"></i> Curated Construction Packages</span>
+            <h1 data-aos="fade-up" data-aos-delay="50">Choose A Package That Fits Your Vision</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Transparent pricing, premium materials, and project managers who treat your dream space like their own.</p>
+            <div class="hero-action-buttons d-flex flex-wrap align-items-center gap-3" data-aos="fade-up" data-aos-delay="150">
+              <a href="#packages" class="btn btn-light text-dark"><i class="bi bi-grid-1x2-fill me-2"></i>Explore Packages</a>
+              <a href="contact_us.html" class="btn btn-outline-light"><i class="bi bi-telephone-outbound me-2"></i>Request Consultation</a>
+            </div>
+            <div class="row g-3 mt-4 hero-stats">
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="hero-metric">
+                  <i class="bi bi-patch-check-fill"></i>
+                  <div>
+                    <strong>10 Year</strong>
+                    <small>structural warranty</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="240">
+                <div class="hero-metric">
+                  <i class="bi bi-stopwatch-fill"></i>
+                  <div>
+                    <strong>On-Time</strong>
+                    <small>timeline commitments</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="280">
+                <div class="hero-metric">
+                  <i class="bi bi-columns-gap"></i>
+                  <div>
+                    <strong>Turnkey</strong>
+                    <small>end-to-end execution</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="320">
+                <div class="hero-metric">
+                  <i class="bi bi-cash-coin"></i>
+                  <div>
+                    <strong>Transparent</strong>
+                    <small>stage-wise payments</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="180">
+            <div class="hero-offer-card">
+              <span class="stamp">Limited slots</span>
+              <h3>Launch Special</h3>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i>Complimentary architectural walkthrough for bookings this month</li>
+                <li><i class="bi bi-check-circle-fill"></i>Dedicated project manager & weekly site reports</li>
+                <li><i class="bi bi-check-circle-fill"></i>Material assurance with brand warranties</li>
+              </ul>
+              <a href="contact_us.html" class="btn btn-light w-100 text-dark fw-semibold"><i class="bi bi-calendar-event me-2"></i>Book a discovery call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans-section" id="packages">
+      <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+          <span class="eyebrow">Package Matrix</span>
+          <h2>Three tailored paths, one trusted build partner</h2>
+          <p>Every package embraces our signature orange ethosâ€”quality craftsmanship, curated materials, and proactive communication.</p>
+        </div>
+        <div class="packages-journey">
+          <article class="journey-tier journey-tier--left journey-tier--essential">
+            <div class="journey-panel" data-aos="fade-right" data-aos-delay="80">
+              <p class="journey-intro">Essential keeps the build focused on reliable fundamentals so you can stretch budgets without compromising safety or finish quality.</p>
+              <div class="journey-pillars">
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-buildings"></i>Structure &amp; shell</h4>
+                  <ul>
+                    <li>M20 RCC reinforced with Fe500 steel</li>
+                    <li>ISI bricks with plinth anti-termite treatment</li>
+                  </ul>
+                </div>
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-bricks"></i>Essentials &amp; comfort</h4>
+                  <ul>
+                    <li>UPVC windows, vitrified floors, granite kitchen counter</li>
+                    <li>Branded electrical &amp; plumbing (Polycab / Havells)</li>
+                  </ul>
+                </div>
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-clipboard-check"></i>Governance</h4>
+                  <ul>
+                    <li>Site engineer inspections twice every week</li>
+                    <li>Milestone photo reports and compliance documentation</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="journey-meta">
+                <span class="meta-chip"><i class="bi bi-hourglass-split"></i>5-6 month build window</span>
+                <span class="meta-chip"><i class="bi bi-rulers"></i>1200-2000 sq.ft sweet spot</span>
+                <span class="meta-chip"><i class="bi bi-shield-check"></i>2 year service cover</span>
+              </div>
+            </div>
+            <div class="journey-node" data-aos="zoom-in" data-aos-delay="150">
+              <span class="node-eyebrow">Tier 01</span>
+              <h3>Essential</h3>
+              <div class="node-price">â‚¹1,649<span>/sq.ft</span></div>
+              <p>Smart fundamentals for dependable, budget-aware builds.</p>
+              <button class="journey-cta" onclick="selectPackage('Essential Package', '1649')"><i class="bi bi-chat-right-text"></i>Build with Essential</button>
+            </div>
+          </article>
+
+          <article class="journey-tier journey-tier--right journey-tier--signature">
+            <div class="journey-panel" data-aos="fade-left" data-aos-delay="80">
+              <p class="journey-intro">Signature blends elevated finishes with designer detailing and proactive governance for homeowners who expect a refined, future-ready space.</p>
+              <div class="journey-pillars">
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-building-up"></i>Structure &amp; envelope</h4>
+                  <ul>
+                    <li>M25 RCC with structural audits at key pours</li>
+                    <li>Advanced waterproofing and pest shield layers</li>
+                  </ul>
+                </div>
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-brush"></i>Interior experience</h4>
+                  <ul>
+                    <li>Designer modular kitchen with branded hardware</li>
+                    <li>Premium flooring, accent ceilings &amp; lighting plan</li>
+                  </ul>
+                </div>
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-people"></i>Governance &amp; extras</h4>
+                  <ul>
+                    <li>Dedicated PM + QA engineer with weekly dashboards</li>
+                    <li>3D mood boards, colour palettes, furnishing guidance</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="journey-meta">
+                <span class="meta-chip"><i class="bi bi-hourglass-top"></i>6-7 month programme</span>
+                <span class="meta-chip"><i class="bi bi-rulers"></i>1800-2800 sq.ft sweet spot</span>
+                <span class="meta-chip"><i class="bi bi-award"></i>3 yr finish / 10 yr structure</span>
+              </div>
+            </div>
+            <div class="journey-node" data-aos="zoom-in" data-aos-delay="150">
+              <span class="node-eyebrow">Tier 02</span>
+              <h3>Signature</h3>
+              <div class="node-price">â‚¹1,899<span>/sq.ft</span></div>
+              <p>Balanced aesthetics and performance with concierge oversight.</p>
+              <button class="journey-cta" onclick="selectPackage('Signature Package', '1899')"><i class="bi bi-calendar-check"></i>Book Signature Consult</button>
+            </div>
+          </article>
+
+          <article class="journey-tier journey-tier--left journey-tier--luxury">
+            <div class="journey-panel" data-aos="fade-right" data-aos-delay="80">
+              <p class="journey-intro">Luxury+ is our flagship experienceâ€”immersive interiors, smart technology, and concierge-level delivery for statement homes and offices.</p>
+              <div class="journey-pillars">
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-buildings"></i>Structural performance</h4>
+                  <ul>
+                    <li>M30 RCC with seismic checks and insulation layering</li>
+                    <li>Anti-termite guarantee plus acoustic planning</li>
+                  </ul>
+                </div>
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-gem"></i>Luxury finishes</h4>
+                  <ul>
+                    <li>Imported marble or engineered wood flooring</li>
+                    <li>Signature ceilings, veneer walls, bespoke joinery</li>
+                  </ul>
+                </div>
+                <div class="journey-pillar">
+                  <h4><i class="bi bi-hdd-network"></i>Smart living &amp; care</h4>
+                  <ul>
+                    <li>Automation for lighting, climate, security &amp; AV</li>
+                    <li>Project concierge, daily updates, white-glove handover</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="journey-meta">
+                <span class="meta-chip"><i class="bi bi-hourglass"></i>7-9 month journey</span>
+                <span class="meta-chip"><i class="bi bi-rulers"></i>2800+ sq.ft estates</span>
+                <span class="meta-chip"><i class="bi bi-shield-check"></i>5 yr finish / 12 yr structure</span>
+              </div>
+            </div>
+            <div class="journey-node" data-aos="zoom-in" data-aos-delay="150">
+              <span class="node-eyebrow">Tier 03</span>
+              <h3>Luxury+</h3>
+              <div class="node-price">â‚¹2,399<span>/sq.ft</span></div>
+              <p>Immersive luxury with smart automation and concierge delivery.</p>
+              <button class="journey-cta" onclick="selectPackage('Luxury+ Package', '2399')"><i class="bi bi-person-badge"></i>Plan Luxury+ Walkthrough</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-section" id="comparison">
+      <div class="container">
+        <div class="section-intro text-white" data-aos="fade-up">
+          <span class="eyebrow text-white-50">Deep dive</span>
+          <h2 class="text-white">What upgrades as you move up the tiers</h2>
+          <p>Every package includes project documentation, safety compliance, and municipal coordination. Higher tiers add premium materials, finishes, and concierge-level support.</p>
+        </div>
+        <div class="table-responsive comparison-table" data-aos="fade-up" data-aos-delay="120">
+          <table class="table mb-0 align-middle text-white">
+            <thead>
+              <tr>
+                <th scope="col">Specifications</th>
+                <th scope="col">Essential</th>
+                <th scope="col">Signature</th>
+                <th scope="col">Luxury+</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Structural design & RCC grade</td>
+                <td>M20, IS code compliance</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>M25 with structural audit</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>M30 with seismic checks</td>
+              </tr>
+              <tr>
+                <td>Flooring & finishes</td>
+                <td>Vitrified tiles (600x600)</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Premium tiles or laminated wood</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Imported marble & engineered wood</td>
+              </tr>
+              <tr>
+                <td>Kitchen</td>
+                <td>Granite platform with SS sink</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Modular kitchen & quartz options</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Designer kitchen with built-in appliances</td>
+              </tr>
+              <tr>
+                <td>Electrical & lighting</td>
+                <td>Standard modular switches</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Anchor/Jung switches, designer lighting plan</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Smart automation & mood lighting</td>
+              </tr>
+              <tr>
+                <td>Bathrooms</td>
+                <td>CP fittings with ceramic tiles</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Jaguar/Parryware, glass partitions</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Kohler/Grohe, rain showers, vanity mirrors</td>
+              </tr>
+              <tr>
+                <td>Project governance</td>
+                <td>Site engineer visits weekly</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Dedicated project manager, weekly dashboard</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>Project concierge, daily digital updates</td>
+              </tr>
+              <tr>
+                <td>Handover & warranty</td>
+                <td>1 year service warranty</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>3 year finishes, 10 year structure</td>
+                <td><i class="bi bi-check-circle-fill me-2"></i>5 year finishes, 12 year structure</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="addons-section" id="addons">
+      <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+          <span class="eyebrow">Upgrade palette</span>
+          <h2>Pick bespoke add-ons to match your lifestyle</h2>
+          <p>Enhance any package with curated services designed to unlock more value from your build.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="60">
+            <div class="addon-card h-100">
+              <div class="addon-icon"><i class="bi bi-brush"></i></div>
+              <h4>Interior Styling Suite</h4>
+              <p>Custom furniture, loose furnishings, and decor boards by our in-house stylists. Includes three revision rounds and final staging.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="120">
+            <div class="addon-card h-100">
+              <div class="addon-icon"><i class="bi bi-lightning-charge"></i></div>
+              <h4>Smart Home Bundle</h4>
+              <p>Lighting, climate, and security automation integrated with Alexa/Google ecosystems, plus onboarding support.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="180">
+            <div class="addon-card h-100">
+              <div class="addon-icon"><i class="bi bi-tree"></i></div>
+              <h4>Landscape & Outdoors</h4>
+              <p>Terrace gardens, pergolas, water features, and outdoor lighting schemes tailored to Bellaryâ€™s climate.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="240">
+            <div class="addon-card h-100">
+              <div class="addon-icon"><i class="bi bi-recycle"></i></div>
+              <h4>Sustainable Extras</h4>
+              <p>Solar PV integration, rainwater harvesting modules, and insulated glazing for lower operational costs.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="addon-card h-100">
+              <div class="addon-icon"><i class="bi bi-shop-window"></i></div>
+              <h4>Commercial Fit-Out</h4>
+              <p>Retail and office interiors, signage, and branding extensions delivered alongside structural work.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="360">
+            <div class="addon-card h-100">
+              <div class="addon-icon"><i class="bi bi-shield-check"></i></div>
+              <h4>Maintenance Shield</h4>
+              <p>Post-handover AMC covering plumbing, electrical, and preventive maintenance with quarterly inspections.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="process">
+      <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+          <span class="eyebrow">Delivery playbook</span>
+          <h2>From idea to inauguration, mapped in six clear milestones</h2>
+          <p>Our project management office guides you through each stage with proactive updates and transparent billing.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="60">
+            <div class="process-step">
+              <div class="step-number">01</div>
+              <div>
+                <h4>Discovery & Design</h4>
+                <p>Requirement workshops, site study, concept layouts, and budget alignment with our architects.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="120">
+            <div class="process-step">
+              <div class="step-number">02</div>
+              <div>
+                <h4>BOQ & Agreement</h4>
+                <p>Detailed bill of quantities, payment milestones, and contracts crystalising quality benchmarks.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="180">
+            <div class="process-step">
+              <div class="step-number">03</div>
+              <div>
+                <h4>Foundation & Structure</h4>
+                <p>Excavation, RCC works, and quality audits with digital reports shared after every critical pour.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="240">
+            <div class="process-step">
+              <div class="step-number">04</div>
+              <div>
+                <h4>Masonry & Services</h4>
+                <p>Walling, MEP routing, waterproofing, and safety inspections aligned to progress billing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="process-step">
+              <div class="step-number">05</div>
+              <div>
+                <h4>Finishes & Interiors</h4>
+                <p>Flooring, joinery, fixtures, and bespoke interiors executed with mock-ups and client sign-offs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="360">
+            <div class="process-step">
+              <div class="step-number">06</div>
+              <div>
+                <h4>Handover & Aftercare</h4>
+                <p>Snag rectification, deep cleaning, final documentation, and onboarding to our maintenance team.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-intro" data-aos="fade-up">
+          <span class="eyebrow">FAQ</span>
+          <h2>Your questions, answered upfront</h2>
+          <p>Still curious about how our packages work? Explore the most common queries from homeowners and business owners.</p>
+        </div>
+        <div class="col-lg-10 mx-auto">
+          <details class="faq-item" data-aos="fade-up" open>
+            <summary>What is included in the package price per sq.ft?</summary>
+            <p>The quoted price covers design support, materials, labour, site supervision, and statutory compliances as listed in the package feature grid. Add-ons such as interiors, landscaping, or smart automation are billed separately.</p>
+          </details>
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="60">
+            <summary>Can I customise materials within a package?</summary>
+            <p>Absolutely. We maintain curated brand lists for each tier. You can upgrade or swap itemsâ€”our team will refresh the BOQ and highlight any cost implications before execution.</p>
+          </details>
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="120">
+            <summary>How are payments scheduled during the project?</summary>
+            <p>Payments are stage-linked to milestones such as foundation, slab casting, masonry, finishes, and handover. You receive digital invoices, site photos, and progress reports prior to each demand.</p>
+          </details>
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="180">
+            <summary>Do you provide architectural and government approvals?</summary>
+            <p>Yes, we coordinate architecture, structural drawings, and facilitate approvals. Government fees are charged at actuals while our liaison support is included in the package.</p>
+          </details>
+          <details class="faq-item" data-aos="fade-up" data-aos-delay="240">
+            <summary>What warranty do I receive after handover?</summary>
+            <p>All packages include a minimum one-year service warranty and ten-year structural warranty. Signature and Luxury+ tiers extend finish warranties and offer optional maintenance contracts.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages-cta">
+      <div class="container">
+        <div class="cta-inner" data-aos="zoom-in">
+          <h2>Ready to lock in the Sri Guru experience?</h2>
+          <p>Schedule a project pulse session to align on budgets, timelines, and finishes. We bring mood boards, sample materials, and a clear roadmap.</p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="contact_us.html" class="btn btn-light text-dark"><i class="bi bi-telephone-forward me-2"></i>Schedule a call</a>
+            <a href="https://wa.me/917795444954" class="btn btn-outline-light" target="_blank" rel="noopener"><i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>SRI GURU CONSTRUCTION & INTERIORS</h3>
+              <p>
+                Bellary, Karnataka, India<br><br>
+                <strong>Phone:</strong> +91 7795 444 954<br>
+                <strong>Email:</strong> sriguruconsultancy05@gmail.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact_us.html">Contact us</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="interior.html">Interior Design</a></li>
+              <li><a href="exterior.html">Exterior Design</a></li>
+              <li><a href="residential.html">Residential</a></li>
+              <li><a href="commercial.html">Commercial</a></li>
+              <li><a href="renovation.html">Renovation</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-4 col-md-6">
+            <h4>Quick Contact</h4>
+            <p>Ready to start your construction project? Get in touch with us today!</p>
+            <a href="contact_us.html" class="btn btn-primary">Get Quote</a>
+          </div><!-- End footer info column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>SRI GURU CONSTRUCTION & INTERIORS</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Package Selection Script -->
+  <script>
+    function selectPackage(packageName, price) {
+      // Store selected package info
+      const packageInfo = {
+        name: packageName,
+        price: price,
+        timestamp: new Date().toISOString()
+      };
+      
+      localStorage.setItem('selectedPackage', JSON.stringify(packageInfo));
+      
+      // Show selection confirmation
+      alert(`You have selected ${packageName} at â‚¹${price}/sq ft. Redirecting to contact page for quote...`);
+      
+      // Redirect to contact page with package info
+
+      window.location.href = `contact_us.html?package=${encodeURIComponent(packageName)}&price=${price}`;
+    }
+    
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+    
+    // Mobile Navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileNavShow = document.querySelector('.mobile-nav-show');
+      const mobileNavHide = document.querySelector('.mobile-nav-hide');
+      const navbar = document.querySelector('.navbar');
+      
+      if (mobileNavShow && mobileNavHide && navbar) {
+        mobileNavShow.addEventListener('click', function() {
+          navbar.classList.add('navbar-mobile');
+          mobileNavShow.classList.add('d-none');
+          mobileNavHide.classList.remove('d-none');
+        });
+        
+        mobileNavHide.addEventListener('click', function() {
+          navbar.classList.remove('navbar-mobile');
+          mobileNavShow.classList.remove('d-none');
+          mobileNavHide.classList.add('d-none');
+        });
+      }
+      
+      // Header scroll effect (same as index page)
+      const header = document.getElementById('header');
+      
+      // Add an event listener to the window's scroll event
+      window.addEventListener('scroll', () => {
+        // Check if the window has scrolled down
+        if (window.scrollY > 100) {
+          // Add the 'scrolled' class to the header
+          header.classList.add('scrolled');
+        } else {
+          // Remove the 'scrolled' class from the header
+          header.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
