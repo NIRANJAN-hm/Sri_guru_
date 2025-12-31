@@ -18,60 +18,112 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /**
-   * Mobile nav toggle
+   * Mobile Navigation System
    */
-
   const mobileNavShow = document.querySelector('.mobile-nav-show');
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
+  const navbar = document.querySelector('.navbar');
+  const body = document.body;
 
-  document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
-      event.preventDefault();
-      mobileNavToggle();
-    })
-  });
-
-  function mobileNavToggle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavShow.classList.toggle('d-none');
-    mobileNavHide.classList.toggle('d-none');
+  // Toggle mobile navigation
+  function openMobileNav() {
+    body.classList.add('mobile-nav-active');
+    if (mobileNavShow) mobileNavShow.classList.add('d-none');
+    if (mobileNavHide) mobileNavHide.classList.remove('d-none');
   }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navbar a').forEach(navbarlink => {
-
-    if (!navbarlink.hash) return;
-
-    let section = document.querySelector(navbarlink.hash);
-    if (!section) return;
-
-    navbarlink.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToggle();
+  function closeMobileNav() {
+    body.classList.remove('mobile-nav-active');
+    if (mobileNavShow) mobileNavShow.classList.remove('d-none');
+    if (mobileNavHide) mobileNavHide.classList.add('d-none');
+    // Close all dropdowns when closing nav
+    document.querySelectorAll('.navbar .dropdown').forEach(dropdown => {
+      dropdown.classList.remove('dropdown-active');
+      const indicator = dropdown.querySelector('.dropdown-indicator');
+      if (indicator) {
+        indicator.classList.remove('bi-chevron-up');
+        indicator.classList.add('bi-chevron-down');
       }
     });
+  }
 
+  // Event listeners for mobile nav toggle buttons
+  if (mobileNavShow) {
+    mobileNavShow.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openMobileNav();
+    });
+  }
+
+  if (mobileNavHide) {
+    mobileNavHide.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMobileNav();
+    });
+  }
+
+  // Handle dropdown toggles in mobile nav (only for parent dropdown links)
+  // Track last toggle time to prevent double-firing on mobile (touch + click)
+  let lastDropdownToggle = 0;
+  
+  document.querySelectorAll('.navbar .dropdown > a').forEach(dropdownLink => {
+    // Prevent the default anchor behavior completely on mobile
+    dropdownLink.addEventListener('click', function(e) {
+      // Check if we're on mobile
+      if (body.classList.contains('mobile-nav-active')) {
+        // Debounce - prevent double-firing on touch devices
+        const now = Date.now();
+        if (now - lastDropdownToggle < 300) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+        lastDropdownToggle = now;
+        
+        // This is a dropdown parent link - prevent navigation and toggle dropdown
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        const parentDropdown = this.parentElement;
+        const indicator = this.querySelector('.dropdown-indicator');
+        
+        // Toggle current dropdown
+        if (parentDropdown.classList.contains('dropdown-active')) {
+          parentDropdown.classList.remove('dropdown-active');
+          if (indicator) {
+            indicator.classList.remove('bi-chevron-up');
+            indicator.classList.add('bi-chevron-down');
+          }
+        } else {
+          parentDropdown.classList.add('dropdown-active');
+          if (indicator) {
+            indicator.classList.remove('bi-chevron-down');
+            indicator.classList.add('bi-chevron-up');
+          }
+        }
+        
+        return false;
+      }
+    }, true); // Use capture phase
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+  // Handle clicks on regular nav links (NOT dropdown parents) - allow normal navigation
+  document.querySelectorAll('.navbar > ul > li:not(.dropdown) > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Allow the default link behavior - browser will navigate
+      console.log('Navigating to:', this.href);
+    });
+  });
 
-  navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
-      if (document.querySelector('.mobile-nav-active')) {
-        event.preventDefault();
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('dropdown-active');
-
-        let dropDownIndicator = this.querySelector('.dropdown-indicator');
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
-      }
-    })
+  // Handle clicks on dropdown menu items - allow normal navigation
+  document.querySelectorAll('.navbar .dropdown ul a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Allow the default link behavior - browser will navigate
+      console.log('Navigating to dropdown item:', this.href);
+    });
   });
 
   /**
